@@ -97,7 +97,7 @@ export function CheckoutForm() {
 				>
 					<span id="button-text">
 						{isLoading ? (
-							<div className="spinner" id="spinner"></div>
+							<div className="spinner" id="spinner" />
 						) : (
 							"Pagar Agora"
 						)}

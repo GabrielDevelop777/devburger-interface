@@ -30,7 +30,7 @@ export function Header() {
 						<HeaderLink to="/" $isActive={pathname === "/"}>
 							Home
 						</HeaderLink>
-						<hr></hr>
+						<hr />
 						<HeaderLink to="/cardapio" $isActive={pathname === "/cardapio"}>
 							Cardápio
 						</HeaderLink>

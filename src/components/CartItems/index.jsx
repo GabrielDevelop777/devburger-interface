@@ -20,19 +20,19 @@ export function CartItems() {
 		<Table.Root>
 			<Table.Header>
 				<Table.Tr>
-					<Table.Th></Table.Th>
+					<Table.Th />
 					<Table.Th>Items</Table.Th>
 					<Table.Th>Preço</Table.Th>
 					<Table.Th>Quantidade</Table.Th>
 					<Table.Th>Total</Table.Th>
-					<Table.Th></Table.Th>
+					<Table.Th />
 				</Table.Tr>
 			</Table.Header>
 			{cartProducts?.length ? (
 				cartProducts.map((product) => (
 					<Table.Tr key={product.id}>
 						<Table.Td>
-							<ProductImage src={product.url}></ProductImage>
+							<ProductImage src={product.url} />
 						</Table.Td>
 
 						<Table.Td>{product.name}</Table.Td>
@@ -65,7 +65,7 @@ export function CartItems() {
 			) : (
 				<EmptyCart>Carrinho Vazio</EmptyCart>
 			)}
-			<Table.Body></Table.Body>
+			<Table.Body />
 		</Table.Root>
 	);
 }
