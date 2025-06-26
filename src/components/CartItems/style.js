@@ -4,8 +4,7 @@ export const ProductImage = styled.img`
     height: 80px;
     width: 80px;
     border: 16px;
-`
-
+`;
 
 export const ButtonGroup = styled.button`
     display: flex;
@@ -30,21 +29,20 @@ export const ButtonGroup = styled.button`
             background-color: #6f357b;
         }
     }
-`
-
+`;
 
 export const EmptyCart = styled.div`
     font-size: 20px;
     text-align: center;
     font-weight: bold;
-`
+`;
 
 export const ProductTotalPrice = styled.div`
     font-weight: bold;
-`
+`;
 
 export const TrashImage = styled.img`
     width: 20px;
     height: 20px;
     cursor: pointer;
-`
+`;

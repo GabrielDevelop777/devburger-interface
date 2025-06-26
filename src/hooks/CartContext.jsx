@@ -10,7 +10,8 @@ export const CartProvider = ({ children }) => {
 
 		let newProductsInCart = [];
 
-		if (cartIndex >= 0) { // Qnd o findIndex não encontra, ele retorna -1
+		if (cartIndex >= 0) {
+			// Qnd o findIndex não encontra, ele retorna -1
 			newProductsInCart = cartProducts;
 
 			newProductsInCart[cartIndex].quantity =
@@ -27,9 +28,9 @@ export const CartProvider = ({ children }) => {
 		updateLocalStorage(newProductsInCart);
 	};
 	const clearCart = (product) => {
-		setCartProducts([])
+		setCartProducts([]);
 
-		updateLocalStorage([])
+		updateLocalStorage([]);
 	};
 
 	const deleteProduct = (productId) => {
