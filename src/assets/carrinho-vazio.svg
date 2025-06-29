@@ -1,0 +1,42 @@
+<svg width="400" height="150" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Texto "SEU CARRINHO" -->
+  <text x="20" y="60" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#b8b8b8">SEU CARRINHO</text>
+  
+  <!-- Texto "ESTÁ VAZIO" -->
+  <text x="20" y="100" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#b8b8b8">ESTÁ VAZIO</text>
+  
+  <!-- Carrinho de compras -->
+  <g transform="translate(300, 35)">
+    <!-- Corpo do carrinho -->
+    <path d="M20 15 L25 15 L30 50 L85 50 L90 15 L95 15" 
+          stroke="#b8b8b8" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Base do carrinho -->
+    <path d="M30 50 L85 50 L82 70 L33 70 Z" 
+          stroke="#b8b8b8" 
+          stroke-width="3" 
+          fill="none" 
+          stroke-linejoin="round"/>
+    
+    <!-- Alça do carrinho -->
+    <path d="M10 15 C10 10 15 5 20 5 L95 5 C100 5 105 10 105 15" 
+          stroke="#b8b8b8" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"/>
+    
+    <!-- Rodas -->
+    <circle cx="42" cy="85" r="6" fill="#b8b8b8"/>
+    <circle cx="73" cy="85" r="6" fill="#b8b8b8"/>
+    
+    <!-- X vermelho -->
+    <g transform="translate(57.5, 35)">
+      <line x1="-8" y1="-8" x2="8" y2="8" stroke="#d32f2f" stroke-width="3" stroke-linecap="round"/>
+      <line x1="8" y1="-8" x2="-8" y2="8" stroke="#d32f2f" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

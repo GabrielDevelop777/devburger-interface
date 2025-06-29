@@ -32,9 +32,17 @@ export const ButtonGroup = styled.button`
 `;
 
 export const EmptyCart = styled.div`
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
+    position: absolute;
+    left: 28%;
+    top: 45%;
+    padding: 40px 20px;
+    width: 500px;
+    
+    svg {
+        width: 100%;
+        max-width: 500px;  // tamanho máximo
+        height: auto;
+    }
 `;
 
 export const ProductTotalPrice = styled.div`
