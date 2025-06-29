@@ -30,7 +30,7 @@ export const Title = styled.h2`
         left: calc(50% - 28px);
         width: 56px;
         height: 4px;
-        background-color: #9758a6;
+        background-color: #9758a6
 
     }
 `;

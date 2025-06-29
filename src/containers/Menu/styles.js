@@ -76,9 +76,13 @@ export const ProductsContainer = styled.div`
     margin: 50px auto 0;
 `;
 
+export const LinkBack = styled.div`
+    text-decoration: none;
+    text-align: center;
+`
+
 export const ButtonVoltar = styled(Link)`
-    display: grid;
-    place-items: center;
+    display: inline-block;
     margin-top: -40px;
 
     text-decoration: none;
@@ -87,7 +91,7 @@ export const ButtonVoltar = styled(Link)`
     color:rgb(91, 11, 111);
     font-size: 24px;
     font-weight: 500;
-    padding-bottom: 5px;
+    padding-bottom: 30px;
     line-height: 20px;
     border: none;
 

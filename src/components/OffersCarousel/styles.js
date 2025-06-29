@@ -21,6 +21,7 @@ export const Container = styled.div`
 
     padding-left: 40px;
     padding-bottom: 40px;
+    border-radius: 10px;
 `;
 
 export const Title = styled.h2`

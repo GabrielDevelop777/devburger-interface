@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { CardProduct } from "../../components/CardProduct";
-import { Footer } from "../../components/Footer";
 import { api } from "../../services/api";
 import { formatPrice } from "../../utils/formatPrice";
 import {
@@ -10,6 +9,7 @@ import {
 	CategoryButton,
 	CategoryMenu,
 	Container,
+	LinkBack,
 	ProductsContainer,
 } from "./styles";
 
@@ -107,8 +107,9 @@ export function Menu() {
 					<CardProduct product={product} key={product.id} />
 				))}
 			</ProductsContainer>
-			<ButtonVoltar to="/">Voltar</ButtonVoltar>
-			<Footer />
+			<LinkBack>
+			<ButtonVoltar to="/">← Voltar</ButtonVoltar>
+			</LinkBack>
 		</Container>
 	);
 }
