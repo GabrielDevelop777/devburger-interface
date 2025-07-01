@@ -108,7 +108,7 @@ export function Menu() {
 				))}
 			</ProductsContainer>
 			<LinkBack>
-			<ButtonVoltar to="/">← Voltar</ButtonVoltar>
+				<ButtonVoltar to="/">← Voltar</ButtonVoltar>
 			</LinkBack>
 		</Container>
 	);

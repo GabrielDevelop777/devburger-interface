@@ -79,7 +79,7 @@ export const ProductsContainer = styled.div`
 export const LinkBack = styled.div`
     text-decoration: none;
     text-align: center;
-`
+`;
 
 export const ButtonVoltar = styled(Link)`
     display: inline-block;
