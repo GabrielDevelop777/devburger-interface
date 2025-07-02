@@ -28,7 +28,7 @@ export const NavLink = styled(Link)`
     padding: 12px 20px;
     text-decoration: none;
     color: #fff;
-    background-color: ${(props) => (props.$isActive ? '#9758a6' : 'transparent')};
+    background-color: ${(props) => (props.$isActive ? "#9758a6" : "transparent")};
 
     &:hover {
         background-color: #9758a6;
