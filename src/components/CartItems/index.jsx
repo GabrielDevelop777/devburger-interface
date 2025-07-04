@@ -12,110 +12,149 @@ import {
 } from "./style";
 
 // Componente SVG personalizado para carrinho vazio
-const EmptyCartSVG = () => (
+const EmptyCartSVG = ({ width = 200, height = 160, className = "" }) => (
 	<svg
-		width="400"
-		height="160"
-		viewBox="0 0 300 120"
+		viewBox="0 0 400 300"
+		width={width}
+		height={height}
+		className={className}
 		xmlns="http://www.w3.org/2000/svg"
-		opacity="0.6"
 	>
-		{/* Texto "SEU CARRINHO" */}
-		<text
-			x="15"
-			y="45"
-			fontFamily="Arial, sans-serif"
-			fontSize="24"
-			fontWeight="bold"
-			fill="#999"
-		>
-			SEU CARRINHO
-		</text>
+		<defs>
+			<linearGradient
+				id="backgroundGradient"
+				x1="0%"
+				y1="0%"
+				x2="100%"
+				y2="100%"
+			>
+				<stop offset="0%" style={{ stopColor: "#e3f2fd", stopOpacity: 1 }} />
+				<stop offset="100%" style={{ stopColor: "#f8f9fa", stopOpacity: 1 }} />
+			</linearGradient>
 
-		{/* Texto "ESTÁ VAZIO" */}
-		<text
-			x="15"
-			y="75"
-			fontFamily="Arial, sans-serif"
-			fontSize="24"
-			fontWeight="bold"
-			fill="#999"
-		>
-			ESTÁ VAZIO
-		</text>
+			<linearGradient id="cartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop offset="0%" style={{ stopColor: "#9758a6", stopOpacity: 1 }} />
+				<stop offset="100%" style={{ stopColor: "#9758a6", stopOpacity: 1 }} />
+			</linearGradient>
 
-		{/* Carrinho de compras */}
-		<g transform="translate(220, 25)">
-			{/* Alça/cabo do carrinho */}
-			<path
-				d="M8 12 C8 8 11 4 15 4 L72 4 C76 4 79 8 79 12"
-				stroke="#999"
-				strokeWidth="3"
-				fill="none"
-				strokeLinecap="round"
-			/>
-
-			{/* Corpo principal do carrinho */}
-			<path
-				d="M15 12 L19 12 L23 38 L65 38 L68 12 L72 12"
-				stroke="#999"
-				strokeWidth="3"
-				fill="none"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-
-			{/* Base do carrinho */}
-			<path
-				d="M23 38 L65 38 L63 53 L25 53 Z"
-				stroke="#999"
-				strokeWidth="2.5"
-				fill="none"
-				strokeLinejoin="round"
-			/>
-
-			{/* Cabo/alça para segurar */}
-			<path
-				d="M-8 20 L8 20"
-				stroke="#999"
-				strokeWidth="3"
-				strokeLinecap="round"
-			/>
-
-			{/* Conexão do cabo com o carrinho */}
-			<path
-				d="M8 12 L8 28"
-				stroke="#999"
-				strokeWidth="3"
-				strokeLinecap="round"
-			/>
-
-			{/* Rodas */}
-			<circle cx="32" cy="65" r="4.5" fill="#999" />
-			<circle cx="56" cy="65" r="4.5" fill="#999" />
-
-			{/* X vermelho */}
-			<g transform="translate(44, 27)">
-				<line
-					x1="-6"
-					y1="-6"
-					x2="6"
-					y2="6"
-					stroke="#e74c3c"
-					strokeWidth="2.5"
-					strokeLinecap="round"
+			<filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+				<feDropShadow
+					dx="2"
+					dy="4"
+					stdDeviation="3"
+					floodColor="#000"
+					floodOpacity="0.1"
 				/>
-				<line
-					x1="6"
-					y1="-6"
-					x2="-6"
-					y2="6"
-					stroke="#e74c3c"
-					strokeWidth="2.5"
-					strokeLinecap="round"
-				/>
-			</g>
+			</filter>
+		</defs>
+
+		<g transform="translate(170, 60)">
+			<path
+				d="M5 15 L55 15 L52 45 L8 45 Z"
+				fill="url(#cartGradient)"
+				stroke="#fff"
+				strokeWidth="2"
+				filter="url(#shadow)"
+			/>
+
+			<path
+				d="M5 15 L0 5 L-8 5"
+				fill="none"
+				stroke="url(#cartGradient)"
+				strokeWidth="3"
+				strokeLinecap="round"
+			/>
+
+			<circle
+				cx="15"
+				cy="60"
+				r="6"
+				fill="url(#cartGradient)"
+				stroke="#fff"
+				strokeWidth="2"
+				filter="url(#shadow)"
+			/>
+			<circle
+				cx="45"
+				cy="60"
+				r="6"
+				fill="url(#cartGradient)"
+				stroke="#fff"
+				strokeWidth="2"
+				filter="url(#shadow)"
+			/>
+
+			<rect
+				x="12"
+				y="20"
+				width="35"
+				height="20"
+				fill="rgba(255,255,255,0.2)"
+				rx="2"
+			/>
 		</g>
+
+		<text
+			x="200"
+			y="200"
+			textAnchor="middle"
+			fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+			fontSize="28"
+			fontWeight="700"
+			fill="#2c3e50"
+		>
+			Carrinho Vazio
+			<animate
+				attributeName="opacity"
+				values="0.7;1;0.7"
+				dur="3s"
+				repeatCount="indefinite"
+			/>
+		</text>
+
+		<text
+			x="200"
+			y="225"
+			textAnchor="middle"
+			fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+			fontSize="14"
+			fill="#7f8c8d"
+		>
+			Que tal adicionar alguns produtos incríveis?
+		</text>
+
+		<circle cx="100" cy="80" r="3" fill="#9758a6" opacity="0.3">
+			<animate
+				attributeName="cy"
+				values="80;70;80"
+				dur="4s"
+				repeatCount="indefinite"
+			/>
+		</circle>
+		<circle cx="320" cy="120" r="2" fill="#9C27B0" opacity="0.4">
+			<animate
+				attributeName="cy"
+				values="120;110;120"
+				dur="3s"
+				repeatCount="indefinite"
+			/>
+		</circle>
+		<circle cx="80" cy="200" r="2" fill="#9C27B0" opacity="0.3">
+			<animate
+				attributeName="cy"
+				values="200;190;200"
+				dur="5s"
+				repeatCount="indefinite"
+			/>
+		</circle>
+		<circle cx="340" cy="180" r="3" fill="#9C27B0" opacity="0.3">
+			<animate
+				attributeName="cy"
+				values="180;170;180"
+				dur="3.5s"
+				repeatCount="indefinite"
+			/>
+		</circle>
 	</svg>
 );
 

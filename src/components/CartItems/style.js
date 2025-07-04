@@ -33,8 +33,8 @@ export const ButtonGroup = styled.button`
 
 export const EmptyCart = styled.div`
     position: absolute;
-    left: 28%;
-    top: 45%;
+    left: 27%;
+    top: 35%;
     padding: 40px 20px;
     width: 500px;
     

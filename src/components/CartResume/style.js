@@ -7,6 +7,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     * {
         color: #484848;
